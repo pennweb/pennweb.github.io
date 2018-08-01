@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+<div class="home">
+  {%- if page.title -%}
+    <h1 class="page-heading">{{ page.title }}</h1>
+  {%- endif -%}
+
+  <p>
+The Penn Today API provides JSON feeds of content from <a href="https://penntoday.upenn.edu/about-contact-us">https://penntoday.upenn.edu.</a>
+  </p>
+
+
+    {% for page in site.pages %}
+    <ul>
+    {% if page.title %}
+          <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+    {% endif %}
+  </ul>
+  {% endfor %}  <!-- page -->
+
+</div>
