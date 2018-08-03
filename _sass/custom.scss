@@ -20,3 +20,9 @@
 table th, table td {
   padding: 5px 15px;
 }
+
+.table-wrapper {
+  max-height: 500px; 
+  margin-bottom: $spacing-unit;
+  overflow-y: scroll;
+}
