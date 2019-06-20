@@ -12,8 +12,41 @@ The Events API provides a JSON feed for upcoming Penn Today events.
 `/api/events?_format=json`
 This base url returns all upcoming events.
   
-{% include json-response.md url=page.api_url %}
+## URL Params
 
+Results may be filtered by `category` using URL params. Specific pages of the result set are accessible with the `page` argument.
+
+
+### Category
+
+`api/events/category/[id]?_format=json`   
+
+Returns items filtered by category, where [id] is the category ID listed in the table below.
+
+|Category       | ID  |
+|---------------|-----|
+|Dance          |   8 |
+|Exhibits       |   9 |
+|Film           |  10 |
+|Fitness        |  11 |
+|For the Kids   |  12 |
+|Music          |  13 |
+|Readings       |  14 |
+|Special Events |  15 |
+|Sports         |  16 |
+|Talks          |  17 |
+|Theater        |  18 |
+
+
+`Example: /api/events/category/17?_format=json` returns events filtered by Talks.
+
+### Multiple Categories
+
+Return items from multiple categories using the form 1+2+3.
+
+`Example: /api/events/category/14+15+17?_format=json` returns events filtered by Readings, Special Events or Talks.
+
+{% include json-response.md url=page.api_url %}
 
 ### Items
 
