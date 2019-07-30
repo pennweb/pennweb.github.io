@@ -1,14 +1,10 @@
-### Subtopic
+#### Subtopic
 
-`api/news/subtopic/[id]?_format=json`  
-
-Returns items filtered by subtopic, where [id] is a subtopic ID listed in the table below.
-
-<div class="table-wrapper subtopic">
+<div class="table-wrapper taxonomy-subtopic">
 <table>
   <thead>
     <tr>
-      <th>Subtopic</th>
+      <th>Subject</th>
       <th>id</th>
     </tr>
   </thead>
@@ -21,14 +17,14 @@ Returns items filtered by subtopic, where [id] is a subtopic ID listed in the ta
 (function($) {
   url = 'https://penntoday.upenn.edu/api/taxonomy/subtopic/all?_format=json';
   $.get(url, function(data) {
-      //populate the table with subtopic data
-      subtopics = '';
+      //populate the table with taxonomy data
+      taxonomy = '';
       $.each(data, function(i, item) {
         name = "<td>" + item.name + "</td>";
         tid  = "<td>" + item.tid + "</td>";
-        subtopics += "<tr>" + name + tid + "</tr>";
+        taxonomy += "<tr>" + name + tid + "</tr>";
       });
-      $(".subtopic tbody").append(subtopics);
+      $(".taxonomy-subtopic tbody").append(taxonomy);
   });
 })(jQuery);
 </script>
