@@ -1,6 +1,6 @@
-#### Subtopic
+#### Penn Current
 
-<div class="table-wrapper taxonomy-subtopic">
+<div class="table-wrapper taxonomy-penn-current">
 <table>
   <thead>
     <tr>
@@ -15,7 +15,7 @@
 
 <script>
 (function($) {
-  url = 'https://penntoday.upenn.edu/api/taxonomy/subtopic/all?_format=json';
+  url = 'https://penntoday.upenn.edu/api/taxonomy/penn-current/all?_format=json';
   $.get(url, function(data) {
       //populate the table with taxonomy data
       taxonomy = '';
@@ -24,7 +24,7 @@
         tid  = "<td>" + item.tid + "</td>";
         taxonomy += "<tr>" + name + tid + "</tr>";
       });
-      $(".taxonomy-subtopic tbody").append(taxonomy);
+      $(".taxonomy-penn-current tbody").append(taxonomy);
   });
 })(jQuery);
 </script>

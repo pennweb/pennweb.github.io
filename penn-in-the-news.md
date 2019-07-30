@@ -44,7 +44,7 @@ The URL param `&page=[page_number]` added to the end of the URL returns a specif
 
 ### Items
 
-`items` is an array of JSON objects containing the news data. Available fields are documented below. Each field is a `string` or `null`.
+`items` is an array of JSON objects containing the Penn in the News data. Available fields are documented below. Each field is a `string` or `null`.
 
 Key|Value
 ---|---

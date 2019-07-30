@@ -1,11 +1,11 @@
-##### Article Mentions
+#### Article Mentions
 
 <div class="table-wrapper article-mentions">
 <table>
   <thead>
     <tr>
-      <th>Subject</th>
-      <th>id</th>
+      <th>Name</th>
+      <th>ID</th>
     </tr>
   </thead>
   <tbody>

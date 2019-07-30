@@ -4,8 +4,8 @@
 <table>
   <thead>
     <tr>
-      <th>Subject</th>
-      <th>id</th>
+      <th>Name</th>
+      <th>ID</th>
     </tr>
   </thead>
   <tbody>
