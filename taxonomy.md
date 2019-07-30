@@ -23,9 +23,9 @@ Each Penn Today taxonomy has a unique url for fetching term data.
 
 Taxonomy results can be filtered by specifying one more taxonomy IDs from the tables below. Separate multiple taxonomies with the '+' operator. 
 
-`Example: /api/taxonomy/subject/5?_format=json` returns the names and IDs from the  Health Sciences vocabulary.
+`Example: /api/taxonomy/subject/5?_format=json` returns the names and IDs of the Health Sciences term from the Subject taxonomy.
 
-`Example: /api/taxonomy/subject/5+6?_format=json` returns the names and IDs from the Health Sciences and Science & Technology vocabulary. 
+`Example: /api/taxonomy/subject/5+6?_format=json` returns the names and IDs of the Health Sciences and Science & Technology terms from the Subject taxonomy. 
 
 {% include taxonomy/events.md %}
 
