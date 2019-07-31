@@ -27,17 +27,23 @@ table th, table td {
 }
 
 .site-title {
-
+  float: none;
 }
 
 .penn-shield {
-    height: 30.75px;
-    float: left;
-    line-height: 42.75px;
+  float: left;
+    height: 30px;
+    line-height: 42px;
     display: block;
     padding: 10px;
+    padding-left: 0;
+    display: none;
 }
 
 .penn-shield img {
   height: 100%;
+}
+
+.site-nav {
+  float: none;
 }
