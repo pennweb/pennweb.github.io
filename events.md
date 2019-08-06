@@ -48,6 +48,12 @@ Return items from multiple categories using the form 1+2+3.
 
 {% include json-response.md url=page.api_url %}
 
+### ID
+
+To fetch specific events by ID, specify the Node ID. Return multiple items by supplying multiple Node Ids.
+
+`Example: /api/events/id/1+2+3?_format=json` returns 3 events with the Node IDs 1, 2 and 3.
+
 ### Items
 
 `items` is an array of JSON objects containing the event data. Available fields are documented below. Each field is a `string` or `null`.
