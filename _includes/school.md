@@ -21,7 +21,7 @@ Example: `https://penntoday.upenn.edu/api/news/subtopic/266` returns stories fil
 
 <script>
 (function($) {
-  url = 'https://penntoday.upenn.edu/api/taxonomy/schools/all';
+  url = 'https://penntoday.upenn.edu/api/taxonomy/schools/all?_format=json';
   $.get(url, function(data) {
       //populate the table with subtopic data
       subtopics = '';
