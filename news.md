@@ -7,8 +7,11 @@ api_url: https://penntoday.upenn.edu/api/news
 
 Penn Today provides JSON feeds for news.
 
-1. News feeds can be filtered by `Topic`, `Subtopic`, `School` or `President`. Example: `https://penntoday.upenn.edu/api/news/topic/all` returns news from all topics.
-3. Refine the filtering further by providing one or more taxonomy IDs from the tables listed below. For example: `https://penntoday.upenn.edu/api/news/topic/19+2+5` returns news from the "Topic" taxonomy, filtered by the topics "Sports", "Campus & Community", and "Health Sciences".
+1. News feeds can be filtered by `topic`, `subtopic`, `school` or `president`. Example: `https://penntoday.upenn.edu/api/news/topic/all` returns news from all topics.
+
+2. Refine the filtering further by providing one or more taxonomy IDs from the tables listed below. For example: `https://penntoday.upenn.edu/api/news/topic/19+2+5` returns news from the `topic` taxonomy, filtered by the topics `sports`, `campus & community`, and `health sciences`.
+
+3. The newest 10 stories are returned by default. To fetch a custom number of items, use the `items_per_page` arugment. For example, `https://penntoday.upenn.edu/api/news/subtopic/266?items_per_page=20` returns the newest 20 items from the `research` subtopic. 
 
 
 ### Topic
