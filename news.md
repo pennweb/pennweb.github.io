@@ -18,9 +18,11 @@ Penn Today provides JSON feeds for news.
 
 `https://penntoday.upenn.edu/api/news/topic/<id>`
 
-Example: `https://penntoday.upenn.edu/api/news/topic/19` returns news filtered by the topic "Sports"
+Example: `https://penntoday.upenn.edu/api/news/topic/all` returns news from `all` topics
 
-Example: `https://penntoday.upenn.edu/api/news/topic/19+2+5` returns news filtered by topics Sports, Campus & Community, and Health Sciences.
+Example: `https://penntoday.upenn.edu/api/news/topic/19` returns news filtered by `sports`
+
+Example: `https://penntoday.upenn.edu/api/news/topic/19+2+5` returns news filtered by `sports`, `campus & community`, and `health sciences`.
 
 <!-- {% include taxonomy/subject.md %} -->
 
@@ -37,7 +39,7 @@ Example: `https://penntoday.upenn.edu/api/news/topic/19+2+5` returns news filter
 
 `https://penntoday.upenn.edu/api/news/subtopic/<id>`  
 
-Example: `https://penntoday.upenn.edu/api/news/subtopic/266` returns stories filtered by the topic "Research"
+Example: `https://penntoday.upenn.edu/api/news/subtopic/266` returns stories filtered by `research`
 
 {% include taxonomy/subtopic.md %}
 
@@ -46,7 +48,7 @@ Example: `https://penntoday.upenn.edu/api/news/subtopic/266` returns stories fil
 
 `https://penntoday.upenn.edu/api/news/school/<id>`
 
-Example: `https://penntoday.upenn.edu/api/news/school/83` returns stories filtered by the Wharton School
+Example: `https://penntoday.upenn.edu/api/news/school/83` returns stories filtered by `wharton school`
 
 <!-- {% include taxonomy/schools.md %} -->
 
