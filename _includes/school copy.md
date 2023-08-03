@@ -1,12 +1,10 @@
 ### School
 
-`https://penntoday.upenn.edu/api/news/subtopic/<id>`  
+`https://penntoday.upenn.edu/api/news/school/<id>`
 
-Returns items filtered by subtopic `<id>`.
+Example: `https://penntoday.upenn.edu/api/news/school/83` returns stories filtered by the Wharton School
 
-Example: `https://penntoday.upenn.edu/api/news/subtopic/266` returns stories filtered by the topic "Research"
-
-<div class="table-wrapper subtopic">
+<div class="table-wrapper schools">
 <table>
   <thead>
     <tr>
@@ -30,7 +28,7 @@ Example: `https://penntoday.upenn.edu/api/news/subtopic/266` returns stories fil
         tid  = "<td>" + item.tid + "</td>";
         subtopics += "<tr>" + name + tid + "</tr>";
       });
-      $(".subtopic tbody").append(subtopics);
+      $(".schools tbody").append(subtopics);
   });
 })(jQuery);
 </script>
