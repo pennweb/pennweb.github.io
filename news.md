@@ -11,16 +11,16 @@ Penn Today provides JSON feeds for news.
 
 2. Refine the filtering further by providing one or more taxonomy IDs from the tables listed below. For example: `https://penntoday.upenn.edu/api/news/topic/19+2+5` returns news from the `topic` taxonomy, filtered by the topics `sports`, `campus & community`, and `health sciences`.
 
-3. The newest 10 stories are returned by default. To fetch a custom number of items, use the `items_per_page` arugment. For example, `https://penntoday.upenn.edu/api/news/subtopic/266?items_per_page=20` returns the newest 20 items from the `research` subtopic. 
+3. The newest 10 stories are returned by default. To fetch a custom number of items, use the `items_per_page` argument. For example, `https://penntoday.upenn.edu/api/news/subtopic/266?items_per_page=20` returns the newest 20 items from the `research` subtopic. 
 
 
 ### Topic
 
 `https://penntoday.upenn.edu/api/news/topic/<id>`
 
-Example: `https://penntoday.upenn.edu/api/news/topic/all` returns news from `all` topics
+Example: `https://penntoday.upenn.edu/api/news/topic/all` returns news from `all` topics.
 
-Example: `https://penntoday.upenn.edu/api/news/topic/19` returns news filtered by `sports`
+Example: `https://penntoday.upenn.edu/api/news/topic/19` returns news filtered by `sports`.
 
 Example: `https://penntoday.upenn.edu/api/news/topic/19+2+5` returns news filtered by `sports`, `campus & community`, and `health sciences`.
 
@@ -39,7 +39,7 @@ Example: `https://penntoday.upenn.edu/api/news/topic/19+2+5` returns news filter
 
 `https://penntoday.upenn.edu/api/news/subtopic/<id>`  
 
-Example: `https://penntoday.upenn.edu/api/news/subtopic/266` returns stories filtered by `research`
+Example: `https://penntoday.upenn.edu/api/news/subtopic/266` returns stories filtered by `research`.
 
 {% include taxonomy/subtopic.md %}
 
@@ -48,7 +48,7 @@ Example: `https://penntoday.upenn.edu/api/news/subtopic/266` returns stories fil
 
 `https://penntoday.upenn.edu/api/news/school/<id>`
 
-Example: `https://penntoday.upenn.edu/api/news/school/83` returns stories filtered by `wharton school`
+Example: `https://penntoday.upenn.edu/api/news/school/83` returns stories filtered by `wharton school`.
 
 <!-- {% include taxonomy/schools.md %} -->
 
