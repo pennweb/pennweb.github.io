@@ -1,14 +1,14 @@
 ---
 layout: page
-title: News Feeds
+title: Penn Today JSON Feeds
 permalink: /news/
 api_url: https://penntoday.upenn.edu/api/news
 ---
 
-Penn API provides JSON feeds for Penn Today news stories. 
+Penn API provides JSON feeds for Penn Today news stories.
 
-1. News can be filtered by  `topic`, `subtopic`, `school` or `president`. Example: `https://penntoday.upenn.edu/api/news/topic/all` returns stories from all "topics".
-2. Refine the filtering by providing one or more taxonomy IDs from the tables listed below. For example: `https://penntoday.upenn.edu/api/news/topic/19+2+5` returns stories from the "Topic" taxonomy, filtered by the topics "Sports", "Campus & Community", and "Health Sciences".
+1. News feeds can be filtered by `topic`, `subtopic`, `school` or `president`. Example: `https://penntoday.upenn.edu/api/news/topic/all` returns stories from all "topics".
+3. Refine the filtering further by providing one or more taxonomy IDs from the tables listed below. For example: `https://penntoday.upenn.edu/api/news/topic/19+2+5` returns stories from the "Topic" taxonomy, filtered by the topics "Sports", "Campus & Community", and "Health Sciences".
 
 
 ### Topic
