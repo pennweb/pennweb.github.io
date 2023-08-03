@@ -7,17 +7,17 @@ api_url: https://penntoday.upenn.edu/api/news
 
 Penn API provides JSON feeds for Penn Today news stories.
 
-1. News feeds can be filtered by `topic`, `subtopic`, `school` or `president`. Example: `https://penntoday.upenn.edu/api/news/topic/all` returns stories from all "topics".
-3. Refine the filtering further by providing one or more taxonomy IDs from the tables listed below. For example: `https://penntoday.upenn.edu/api/news/topic/19+2+5` returns stories from the "Topic" taxonomy, filtered by the topics "Sports", "Campus & Community", and "Health Sciences".
+1. News feeds can be filtered by `Topic`, `Subtopic`, `School` or `President`. Example: `https://penntoday.upenn.edu/api/news/topic/all` returns news from all topics.
+3. Refine the filtering further by providing one or more taxonomy IDs from the tables listed below. For example: `https://penntoday.upenn.edu/api/news/topic/19+2+5` returns news from the "Topic" taxonomy, filtered by the topics "Sports", "Campus & Community", and "Health Sciences".
 
 
 ### Topic
 
 `https://penntoday.upenn.edu/api/news/topic/<id>`
 
-Example: `https://penntoday.upenn.edu/api/news/topic/19` returns stories filtered by the topic "sports"
+Example: `https://penntoday.upenn.edu/api/news/topic/19` returns news filtered by the topic "Sports"
 
-Example: `https://penntoday.upenn.edu/api/news/topic/19+2+5` returns stories filtered by topics Sports, Campus & Community, and Health Sciences.
+Example: `https://penntoday.upenn.edu/api/news/topic/19+2+5` returns news filtered by topics Sports, Campus & Community, and Health Sciences.
 
 <!-- {% include taxonomy/subject.md %} -->
 
