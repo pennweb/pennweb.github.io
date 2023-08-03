@@ -5,7 +5,11 @@ permalink: /news/
 api_url: https://penntoday.upenn.edu/api/news
 ---
 
-Penn API provides JSON feeds for Penn Today news stories. Results are filtered by `school`, `topic`, `subtopic` or `president` by specifying taxonomy IDs.
+Penn API provides JSON feeds for Penn Today news stories. 
+
+1. News can be filtered by  `topic`, `subtopic`, `school` or `president`. Example: `https://penntoday.upenn.edu/api/news/topic/all` returns stories from all "topics".
+2. Refine the filtering by providing one or more taxonomy IDs from the tables listed below. Example: `https://penntoday.upenn.edu/api/news/topic/19+2+5` means I chose the "topics" taxonomy, and I filtered the topics by "Sports", "Campus & Community", and "Health Sciences".
+
 
 ### Topic
 
@@ -13,8 +17,11 @@ Penn API provides JSON feeds for Penn Today news stories. Results are filtered b
 
 Example: `https://penntoday.upenn.edu/api/news/topic/19` returns stories filtered by the topic "sports"
 
+Example: `https://penntoday.upenn.edu/api/news/topic/19+2+5` returns stories filtered by topics Sports, Campus & Community, and Health Sciences.
 
-| Topic                               | id  |
+<!-- {% include taxonomy/subject.md %} -->
+
+| Topic                               | ID  |
 |-------------------------------------|-----|
 | Arts, Humanities, & Social Sciences |   1 |
 | Sports                              |  19 |
@@ -23,14 +30,42 @@ Example: `https://penntoday.upenn.edu/api/news/topic/19` returns stories filtere
 | Health Sciences                     |   5 |
 | Science & Technology                |   6 |
 
-{% include school.md %}
+### Subtopic
 
-<!-- {% include subtopic.md %} -->
+`https://penntoday.upenn.edu/api/news/subtopic/<id>`  
+
+Example: `https://penntoday.upenn.edu/api/news/subtopic/266` returns stories filtered by the topic "Research"
+
+{% include taxonomy/subtopic.md %}
+
+
+### School
+
+`https://penntoday.upenn.edu/api/news/school/<id>`
+
+Example: `https://penntoday.upenn.edu/api/news/school/83` returns stories filtered by the Wharton School
+
+<!-- {% include taxonomy/schools.md %} -->
+
+| School                                  | ID  |
+|-----------------------------------------|-----|
+| Annenberg School for Communication      |  72 |
+| Graduate School of Education            |  73 |
+| Law School                              |  74 |
+| Perelman School of Medicine             |  75 |
+| School of Arts & Sciences               |  76 |
+| School of Dental Medicine               |  77 |
+| School of Design                        |  78 |
+| School of Engineering & Applied Science |  79 |
+| School of Nursing                       |  80 |
+| School of Social Policy & Practice      |  81 |
+| School of Veterinary Medicine           |  82 |
+| Wharton School                          |  83 |
 
 
 ### President
 
-`/api/news/president`  
+`https://penntoday.upenn.edu/api/news/president`
   
-Returns items related to the president.
+Returns news related to the president.
 

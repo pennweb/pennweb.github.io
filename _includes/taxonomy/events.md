@@ -4,7 +4,7 @@
 <table>
   <thead>
     <tr>
-      <th>Name</th>
+      <th>Event Category</th>
       <th>ID</th>
     </tr>
   </thead>
