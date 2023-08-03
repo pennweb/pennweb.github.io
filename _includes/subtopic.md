@@ -1,8 +1,10 @@
 ### Subtopic
 
-`api/news/subtopic/[id]?_format=json`  
+`https://penntoday.upenn.edu/api/news/subtopic/<id>`  
 
-Returns items filtered by subtopic, where [id] is a subtopic ID listed in the table below.
+Returns items filtered by subtopic `<id>`.
+
+Example: `https://penntoday.upenn.edu/api/news/subtopic/266` returns stories filtered by the topic "Research"
 
 <div class="table-wrapper subtopic">
 <table>
@@ -19,7 +21,7 @@ Returns items filtered by subtopic, where [id] is a subtopic ID listed in the ta
 
 <script>
 (function($) {
-  url = 'https://penntoday.upenn.edu/api/taxonomy/subtopic/all?_format=json';
+  url = 'https://penntoday.upenn.edu/api/taxonomy/subtopic/all';
   $.get(url, function(data) {
       //populate the table with subtopic data
       subtopics = '';

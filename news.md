@@ -2,32 +2,68 @@
 layout: page
 title: News
 permalink: /news/
-api_url: https://penntoday.upenn.edu/api/news?_format=json
+api_url: https://penntoday.upenn.edu/api/news
 ---
 
-The News API provides a JSON feed for Penn Today news stories. Results are filtered using the parameters described below, and pagination is provided for navigating the results.
+Penn API provides JSON feeds for Penn Today news stories. Results are filtered by `school`, `topic`, `subtopic` or `president` by specifying taxonomy IDs.
 
-## URL
+### Topic
 
-`/api/news?_format=json`  
+`https://penntoday.upenn.edu/api/news/topic/<id>`  
 
-This base url returns the most recent news stories from Penn Today.
-  
-## URL Params
+Returns items filtered by topic `<id>`.
 
-Results may be filtered by `school`, `topic`, `subtopic` or `president` using URL params. Specific pages of the result set are accessible with the `page` argument.
+Example: `https://penntoday.upenn.edu/api/news/topic/19` returns stories filtered by the topic "sports"
 
-### President
 
-`/api/news/president?_format=json`  
-  
-Returns items related to the president.
+| Topic                               | id  |
+|-------------------------------------|-----|
+| Arts, Humanities, & Social Sciences |   1 |
+| Sports                              |  19 |
+| Campus & Community                  |   2 |
+| Education, Business, & Law          |   4 |
+| Health Sciences                     |   5 |
+| Science & Technology                |   6 |
+
+
+{% include subtopic.md %}
 
 ### School
 
-`api/news/school/[id]?_format=json`   
+`https://penntoday.upenn.edu/api/news/school/<id>`   
 
-Returns items filtered by school, where [id] is the school ID listed in the table below.
+Returns items filtered by school.
+
+Example: `https://penntoday.upenn.edu/api/news/school/83` returns stories filtered by the Wharton School
+
+<div class="table-wrapper schools">
+<table>
+  <thead>
+    <tr>
+      <th>School</th>
+      <th>ID</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+  </table>
+</div>
+
+<script>
+(function($) {
+  url = 'https://penntoday.upenn.edu/api/taxonomy/schools/all';
+  $.get(url, function(data) {
+      //populate the table with subtopic data
+      items = '';
+      $.each(data, function(i, item) {
+        name = "<td>" + item.name + "</td>";
+        tid  = "<td>" + item.tid + "</td>";
+        items += "<tr>" + name + tid + "</tr>";
+      });
+      $(".schools tbody").append(items);
+  });
+})(jQuery);
+</script>
 
 | School Name                             | ID  |
 |-----------------------------------------|-----|
@@ -44,50 +80,10 @@ Returns items filtered by school, where [id] is the school ID listed in the tabl
 | School of Veterinary Medicine           |  82 |
 | Wharton School                          |  83 |
 
-`Example: /api/news/school/83?_format=json` returns stories filtered by the Wharton School
 
-### Topic
+### President
 
-`api/news/topic/[id]?_format=json`  
-
-Returns items filtered by topic, where [id] is a topic ID listed in the table below.
-
-
-| Topic                               | id  |
-|-------------------------------------|-----|
-| Arts, Humanities, & Social Sciences |   1 |
-| Sports                              |  19 |
-| Campus & Community                  |   2 |
-| Education, Business, & Law          |   4 |
-| Health Sciences                     |   5 |
-| Science & Technology                |   6 |
-
-`Example: /api/news/topic/19?_format=json` returns stories filtered by the topic "sports"
-
-{% include subtopic.md %}
-
-### Page
-
-The URL param `&page=[page_number]` added to the end of the URL returns a specific page of the result.
-
-`Example: /api/news/topic/1?_format=json&page=10` returns the 10th page of news stories filtered by the topic "Arts & Humanities"
-
-{% include json-response.md url=page.api_url %}
-
-### Items
-
-`items` is an array of JSON objects containing the news data. Available fields are documented below. Each field is a `string` or `null`.
-
-Key|Value
----|---
-title|The story title
-body|The full story body as it appears on Penn Today, including HTML
-summary|A summary of the story
-date|The story date in the format `yyyy-mm-dd`
-image|The full path to the story image, 600 x 400 pixels (3x2)
-url|The story permalink
-
-{% include json-items.md url=page.api_url %}
-
-{% include json-page.md url=page.api_url %}
+`/api/news/president`  
+  
+Returns items related to the president.
 
