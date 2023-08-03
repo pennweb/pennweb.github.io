@@ -25,7 +25,7 @@ Example: `https://penntoday.upenn.edu/api/news/topic/19` returns stories filtere
 
 {% include school.md %}
 
-{% include subtopic.md %}
+<!-- {% include subtopic.md %} -->
 
 
 ### President
